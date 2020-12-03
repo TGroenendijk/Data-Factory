@@ -1,5 +1,5 @@
 {
-	"name": "RunFlow",
+	"name": "RunSalesOrdersFlow",
 	"properties": {
 		"activities": [
 			{

@@ -14,7 +14,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy Data to DW",
+							"name": "Copy Data to DWH",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
