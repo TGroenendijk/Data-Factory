@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlDWDataset",
+	"name": "AzureSynapseDataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "itHeroSynapseAnalytics",
