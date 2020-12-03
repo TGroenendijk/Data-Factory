@@ -66,7 +66,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureSqlDWDataset",
+									"referenceName": "AzureSynapseDataset",
 									"type": "DatasetReference",
 									"parameters": {
 										"DWTableName": {
