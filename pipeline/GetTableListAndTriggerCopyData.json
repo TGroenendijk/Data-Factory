@@ -25,7 +25,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "itHeroSqlDatabaseDataset",
+						"referenceName": "SqlDatabaseDataset",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false

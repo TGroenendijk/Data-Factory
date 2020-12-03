@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "OrdersFlow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {

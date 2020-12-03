@@ -1,5 +1,5 @@
 {
-	"name": "itHeroSqlDatabaseDataset",
+	"name": "SqlDatabaseDataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "itHeroSqlDatabase",

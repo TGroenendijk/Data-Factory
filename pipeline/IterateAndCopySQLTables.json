@@ -60,7 +60,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "itHeroSqlDatabaseDataset",
+									"referenceName": "SqlDatabaseDataset",
 									"type": "DatasetReference"
 								}
 							],
