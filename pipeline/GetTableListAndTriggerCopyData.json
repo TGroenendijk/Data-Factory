@@ -34,6 +34,7 @@
 			},
 			{
 				"name": "TriggerCopy",
+				"description": "Execute pipeline",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
