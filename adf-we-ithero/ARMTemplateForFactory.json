@@ -63,6 +63,7 @@
 					},
 					{
 						"name": "TriggerCopy",
+						"description": "Execute pipeline",
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
@@ -307,6 +308,33 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/itHeroSynapseAnalytics')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SalesOrders')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "itHeroBlobStorage",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"container": "salesorders"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/itHeroBlobStorage')]"
 			]
 		},
 		{
@@ -663,33 +691,6 @@
 				"[concat(variables('factoryId'), '/datasets/SqlTableSalesOrderHeader')]",
 				"[concat(variables('factoryId'), '/datasets/SqlTableSalesOrderDetail')]",
 				"[concat(variables('factoryId'), '/datasets/SalesOrders')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SalesOrders')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "itHeroBlobStorage",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"container": "salesorders"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/itHeroBlobStorage')]"
 			]
 		}
 	]
