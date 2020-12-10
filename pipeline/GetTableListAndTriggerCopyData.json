@@ -4,7 +4,7 @@
 		"activities": [
 			{
 				"name": "LookupTableList",
-				"description": "Lookup data from tables",
+				"description": "",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
