@@ -58,6 +58,34 @@
 						}
 					}
 				}
+			},
+			{
+				"name": "Send Email",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "TriggerCopy",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-18.westeurope.logic.azure.com:443/workflows/0365a71742dc460aa0e48f1a28e92d91/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aBCJ7kCZ87Yoi0E_TZqoBRt3p_Ef6KznBascjEGZtco",
+					"method": "POST",
+					"body": {
+						"value": "@activity('TriggerCopy').output",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": [],
