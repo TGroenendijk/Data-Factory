@@ -32,7 +32,7 @@
 				"activities": [
 					{
 						"name": "LookupTableList",
-						"description": "Lookup data ",
+						"description": "Lookup data from tables",
 						"type": "Lookup",
 						"dependsOn": [],
 						"policy": {
